@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Iron Legion | Armor Database</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation & Header -->
+    <nav>
+        <div class="logo-container">
+            <!-- Iron Man 2 Triangular Arc Reactor (Pure CSS) -->
+            <div class="arc-reactor">
+                <div class="triangle-glow"></div>
+                <div class="triangle-inner"></div>
+            </div>
+            <h1>STARK <span class="highlight">ARCHIVES</span></h1>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h2>HALL OF ARMOR</h2>
+            <p>Accessing Database... // Classified Level 10</p>
+        </div>
+    </header>
+
+    <!-- Filter Controls -->
+    <section class="controls">
+        <button class="btn active" onclick="filterSelection('all')">All Systems</button>
+        <button class="btn" onclick="filterSelection('prototype')">Prototypes</button>
+        <button class="btn" onclick="filterSelection('standard')">Standard Issue</button>
+        <button class="btn" onclick="filterSelection('specialist')">Specialist</button>
+        <button class="btn" onclick="filterSelection('buster')">Heavy Duty</button>
+        <button class="btn" onclick="filterSelection('nano')">Nano-Tech</button>
+    </section>
+
+    <!-- Armor Grid -->
+    <div class="container">
+        <div id="armor-grid" class="grid">
+            <!-- Armors will be injected here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Detail Modal (Popup) -->
+    <div id="armor-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modal-title">Mark Name</h2>
+            <div class="modal-body">
+                <div class="modal-img-container">
+                    <img id="modal-img" src="" alt="Armor Image">
+                </div>
+                <div class="modal-info">
+                    <h3>Specifications</h3>
+                    <p><strong>Class:</strong> <span id="modal-category"></span></p>
+                    <p><strong>Status:</strong> <span id="modal-status"></span></p>
+                    <h3>Special Features</h3>
+                    <ul id="modal-features">
+                        <!-- Features list -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Stark Industries Database &copy; 2024 | Built for the Iron Legion</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
